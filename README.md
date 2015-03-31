@@ -9,7 +9,7 @@ The workbook has three main worksheets: Maze Sheet, Maze Settings and Special Op
 
 ### Maze Sheet
 
-This is where the maze will be viewed after generation is begun. If **Disable Screen Updating** is set to false [Under Special Settings] this is also where the maze generation can be viewed live.
+This is where the maze will be viewed after generation is finished. If **Disable Screen Updating** is set to false [Under Special Settings] this is also where the maze generation can be seen live.
 
 ### Maze Settings
 
@@ -17,7 +17,7 @@ The Maze Settings worksheet is the powerhouse behind this macro. **Parameters ha
 
 ##### Global Settings
 
-The global settings affect all of the maze paths during generation.
+The global settings affect all of the maze paths during generation. They include:
 - the position and size of the square in which mazes will be generated
 - the number of maze paths that will be generated
 - a random seed value, which is used by the macro to generate the maze
@@ -33,7 +33,7 @@ The Individual Maze Properties table contains the properties for each of the maz
 - Initial X and Y; this is the position where the maze path will begin. This should be unique and less than the width and height of the maze
 - Maze Bias; a bias of X% means the path will have a X% chance of growing longer on a given frame.
 
-The remaining properties control how the Colorizer will be controlled. The colorizer function takes three sinewaves and obtains a color using the color properties defined here. The general equation is shown below.
+The remaining properties control how the Colorizer will be controlled. The colorizer creates three sinewaves and obtains a color using the color properties defined here. The general sine equation is shown below.
 ```
 newcolor = RGB( _
         (1 - dis(1)) * Round(max(1) - rng(1) * Sin((2 * pi) * pos / prd(1)))), _
@@ -48,7 +48,7 @@ It's pretty unreadable, so here's how it works:
 - rng is the range at which the sine function should be allowed to waver. 
 - pos is the current position which is attempting to acquire a color
 - prd defines the period of the sine, which is multiplied by 2 * pi to make it easy to select specific periods. A period of 4 will cycle through 4 colors.
-- finally phs defines the phase and should typically be set to three, unless one of the colors is disabled or a particularly interesting look is of interest.
+- finally phs defines the phase and should typically be set to three, unless one of the RGB colors is disabled.
 
 Several other options exist which control what properties are randomized when the 'Randomize Properties' button is pressed. This was included to keep paths which produced interesting output static while randomizing the remaining mazes.
 
