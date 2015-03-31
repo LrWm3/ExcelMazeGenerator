@@ -62,14 +62,14 @@ Several special configurations exist.
 - Clear Previous Mazes. When this is on, all previously drawn mazes on the MazeSheet will be erased whenever a new maze is generated. Disabling this allows for a potential collage of generation.
 - Add Delay. This slows down the rate of maze generation, as the process is typically too slow already you'll want this to be zero.
 - Fill Mode. *Incomplete.* The idea was to pass a bitmap which would define where a maze could generate instead of simply using a user defined square. That way it would be possible to fill out pictures 'maze style'.
-- Color Spill. When toggled, this causes color to spill out into surrounding blocks. Instead of a rigid maze you get a more convoluted output. The color is mixed with whatever color is there currently (typically black)
-- Color Spill Dim. Dims the color that is spilled, reducing the hue by multiplying by this number.
-- Color Spill Average. Defines how much of the previous color to use and how much of the new color to use. A value of 0.5 uses fifty percent of the previous with the new. 
+- Color Spill. When toggled, this causes color to spill out into surrounding blocks. Instead of a rigid maze you get a more convoluted output. The color is mixed with whatever color is there currently
+- Color Spill Dim. Dims the color that is spilled, reducing the hue by multiplying by this number
+- Color Spill Average. Defines how much of the previous color to use and how much of the new color to use when mixing the two together during the spill. A value of 0.5 uses fifty percent of the previous color with the new color. 
 
 ### Future Improvements
-although I only work on this every couple of months when inpiration strikes, there are a few things I wouldn't mind implementing:
-- integrated bitmap support for more interesting maze areas. This is probably what I most want to do.
-- save as a bitmap / jpg from inside the workbook
+Although I only work on this every couple of months when inspiration strikes, there are a few things I wouldn't mind implementing:
+- integrated bitmap support for more interesting maze areas. This is probably what I want to do most.
+- save as a jpg from inside the workbook
 - infinite mode / multi-maze zone mode; continually randomly generate mazes in the output area to create a collage of mazes
 - more interesting maze algorithms
 
