@@ -66,10 +66,18 @@ Several special configurations exist.
 - Color Spill Dim. Dims the color that is spilled, reducing the hue by multiplying by this number
 - Color Spill Average. Defines how much of the previous color to use and how much of the new color to use when mixing the two together during the spill. A value of 0.5 uses fifty percent of the previous color with the new color. 
 
+##### New! Bitmap Support!
+
+This feature was one I had wanted to implement since I started this project. After I created this repo and read-me, I was drawn back into the project in order to complete this task.
+
+A new file was included in the project. This file can take a bitmap image and translate it into cell by cell colors. This 'cell image' can then be moved into the newly created 'ImageMapping' sheet, and the maze generation will use any non-black squares to generate the maze, meaning you can fill out silouettes with the maze generation. I have included a new example image of this effect in the output folder. 
+
+**To activate fill-mode, open the Special Options sheet and the hit the toggle for 'Fill Mode'** Then, convert a bitmap to cells using the other worksheet and then paste the image cells into the ImageMapping sheet. an example image is already there. Finally, in order to get this mode to work at the moment, **the width and height of the maze should be set to that of the width and height of the image. **
+
 ### Future Improvements
 Although I only work on this every couple of months when inspiration strikes, there are a few things I wouldn't mind implementing:
-- integrated bitmap support for more interesting maze areas. This is probably what I want to do most.
-- save as a jpg from inside the workbook
+- Integrated bitmap support, to remove the need for the extra worksheet
+- save as an animated gif from inside the workbook
 - infinite mode / multi-maze zone mode; continually randomly generate mazes in the output area to create a collage of mazes
 - more interesting maze algorithms
 
