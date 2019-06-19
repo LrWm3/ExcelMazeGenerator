@@ -20,7 +20,7 @@ If color-spill is enabled, pathways will paint over nearby squares with their co
 
 ## Description / Boring Text
 
-Make the maze. Color the maze based on depth. Use sine functions plus angluar offsets for pretty rainbows. Fill in pictures. Spill some ink.
+Make the maze. Watch it grow in real time. Color the maze based on depth. Use sine functions plus angluar offsets for pretty rainbows. Fill in pictures. Spill some ink.
 
 ## Using This Workbook
 
